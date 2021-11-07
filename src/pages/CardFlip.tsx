@@ -1,9 +1,10 @@
 import { CreateAnimation, IonButton, IonCard, IonCardContent, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
+import './CardFlip.css';
 
-const Tab2: React.FC = () => {
+const Tab1: React.FC = () => {
+
   let [playAnimation, setPlayAnimation] = useState(false);
 
   useEffect(() => {
@@ -15,13 +16,15 @@ const Tab2: React.FC = () => {
       <IonContent fullscreen>
         <IonContent>
           <CreateAnimation
-              duration={3000}
-              iterations={Infinity}
-              keyframes={[
-                { offset: 0, background: 'red' },
-                { offset: 0.72, background: 'var(--background)' },
-                { offset: 1, background: 'green' }
-              ]}
+            duration={500}
+            fromTo={{
+              property: "transform",
+              fromValue: "",
+              toValue: `rotateY(360deg)`,
+            }}
+            easing="ease-in"
+            play={playAnimation}
+            stop
           >
             <IonCard
               style={{
@@ -67,4 +70,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default Tab1;
