@@ -1,3 +1,15 @@
+.animation-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+width: 50%;
+}
+
+ion-card {
+    width: 500px;
+}
+
 .gradient-border {
     --borderWidth: 3px;
     background: #1D1F20;

@@ -1,10 +1,19 @@
-import { CreateAnimation, IonButton, IonCard, IonCardContent, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { useEffect, useState } from 'react';
-import ExploreContainer from '../components/ExploreContainer';
-import './CardFlip.css';
+import {
+  CreateAnimation,
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import { useEffect, useState } from "react";
+import ExploreContainer from "../components/ExploreContainer";
+import "./CardFlip.css";
 
 const Tab1: React.FC = () => {
-
   let [playAnimation, setPlayAnimation] = useState(false);
 
   useEffect(() => {
@@ -12,43 +21,36 @@ const Tab1: React.FC = () => {
   }, [playAnimation]);
 
   return (
-<IonPage>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Animation 1</IonTitle>
+        </IonToolbar>
+      </IonHeader>
       <IonContent fullscreen>
         <IonContent>
-          <CreateAnimation
-            duration={500}
-            fromTo={{
-              property: "transform",
-              fromValue: "",
-              toValue: `rotateY(360deg)`,
-            }}
-            easing="ease-in"
-            play={playAnimation}
-            stop
-          >
-            <IonCard
-              style={{
-                height: "40vh",
-                borderRadius: "25px",
-                marginTop: "10rem"
+          <div className="animation-container">
+            <CreateAnimation
+              duration={500}
+              fromTo={{
+                property: "transform",
+                fromValue: "",
+                toValue: `rotateY(360deg)`,
               }}
+              easing="ease-in"
+              play={playAnimation}
+              stop
             >
-
-              <IonCard 
+              <IonCard
+                color="primary"
                 style={{
-                  height: "15vh",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  height: "40vh",
+                  borderRadius: "25px",
+                  marginTop: "10rem",
                 }}
-              >
-                <IonCardContent>
-      
-                </IonCardContent>
-              </IonCard>
-            </IonCard>
-          </CreateAnimation>
-
+              ></IonCard>
+            </CreateAnimation>
+          </div>
           <IonButton
             onClick={() => {
               setPlayAnimation(true);

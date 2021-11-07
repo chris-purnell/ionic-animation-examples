@@ -1,0 +1,19 @@
+
+.form-container {
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 15rem; */
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.register-button {
+    margin-top: 3rem;
+    width: 50%;
+}

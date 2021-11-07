@@ -1,0 +1,31 @@
+#heading-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+    gap: 25px;
+    align-items: center;
+}
+
+/* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+    line-height: 7px;
+    border-radius: 5px;
+  }
+  
+  .custom-skeleton ion-skeleton-text:last-child {
+    margin-bottom: 5px;
+  }
+
+  .skeleton-text {
+      width: 30%;
+  }
+
+  ion-text {
+    line-height: 13px;
+  }
+
+  ion-note {
+      display: flex;
+  }
