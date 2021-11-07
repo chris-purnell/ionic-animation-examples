@@ -28,7 +28,6 @@ const Tab3: React.FC = () => {
 
   const saveUser = async (e: any) => {
     e.preventDefault()
-
     setBusy(true)
     toast("A toast to you for registering!", 8000)
     setBusy(false)
@@ -36,11 +35,7 @@ const Tab3: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
