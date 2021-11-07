@@ -1,0 +1,7 @@
+{
+  "name": "podcaster-animations-sample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
